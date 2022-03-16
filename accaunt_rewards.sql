@@ -14,10 +14,6 @@ with block_border as (
     limit
         3
     ),
---     1602000,,4426,1
---     1601400,1602000,4425,2
---     1600800,1601400,4424,3
---     23183
 
 -- applying borders
 apply_border as (
@@ -61,6 +57,7 @@ join_aacount_amount as (
             and a.block_id >= bb.block_id
     )
 
+-- join blocktime
 select
        j.block_id
      , j.round
